@@ -1,0 +1,58 @@
+/* Default Styles */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+  	width:100%;
+  	height: 60vh;
+	background-image: radial-gradient(circle at 50% 50% , #FF0000 0%, #0000FF 100%, #FFFFFF 50%);
+}
+
+/* Color Container Styles */
+
+.clockContainer {
+	margin: 50vh auto;
+	position:relative;
+}
+
+.time {
+	position:absolute;
+	font-size: 34px;
+	text-align: center;
+	margin: 0% 0% 0% 42%;
+	vertical-align: center;
+	z-index: -1;
+}
+
+.hexColor {
+	position:absolute;
+	font-size: 34px;
+	text-align: center;
+	margin: 0% 0% 1% 42%;
+	vertical-align: center;
+	opacity: 0;
+}
+
+.line {
+	position:absolute;
+	width: 30%;
+	font-size: 34px;
+	text-align: center;
+	margin: 1% 0 0 36%;
+	vertical-align: top;
+	z-index: -1;
+} 
+
+
+
+/* psuedo-selectors */
+
+.hexColor:hover {
+	opacity: 1;
+	background-color: red;
+	z-index:10;
+
+}
+
