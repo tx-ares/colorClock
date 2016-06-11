@@ -33,11 +33,17 @@ currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
 // Concatenate the string and display it to the humons!
 timeEl.innerHTML = currentHours +":"+ currentMinutes + ":"+ currentSeconds + timeOfDay
 
+// Now to update the hexcolor of our radial gradient background according to what time it is.
+
+var hexHours = (parseInt(currentHours) - 10) + currentHours.toString(16)
+var hexMinutes = currentMinutes.toString(16)
+var hexSeconds = currentSeconds.toString(16)
+
+hexColorEl.innerHTML= '#' + hexHours + hexMinutes + hexSeconds 
+
 }
 
 setInterval(updateTime, 1000)
-
-// Now to update the hexcolor of our radial gradient background according to what time it is.
 
 
 
