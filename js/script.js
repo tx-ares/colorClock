@@ -4,7 +4,7 @@ console.log("hello worldzz!")
 
 var timeEl = document.querySelector(".time")
 var hexColorEl = document.querySelector(".hexColor")
-
+var bodyEl = document.querySelector('body')
 
 
 // Getting the time and turning it readable to humans.  (In HH:MM:SS format)
@@ -41,9 +41,24 @@ var hexSeconds = currentSeconds.toString(16)
 
 hexColorEl.innerHTML= '#' + hexHours + hexMinutes + hexSeconds 
 
+var updatedHexColor = hexColorEl.innerHTML
+
+console.log(bodyEl.style.backgroundImage)
+console.log(timeEl.style.position)
+
+// bodyEl.style.backgroundImage = "radial-gradient(circle at 50% 50% , " + updatedHexColor + "0%, #0000FF 100%);"
+
+// var updatedHexColorJQ = this.updatedHexColor
+
+// console.log($('body').css('background-image', 'radial-gradient(circle at 50% 50%' + updatedHexColorJQ )
+// )
+// timeEl.style.backgroundImage = "radial-gradient(circle at 50% 50% , " + updatedHexColor + "0%, #0000FF 100%);"
+
 }
 
 setInterval(updateTime, 1000)
+
+
 
 
 
