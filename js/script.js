@@ -7,6 +7,8 @@ var hexColorEl = document.querySelector(".hexColor")
 var bodyEl = document.querySelector('body')
 var lineEl = document.querySelector('.line')
 
+var lineWidth = parseInt(lineEl.style.width)
+
 // Getting the time and turning it readable to humans.  (In HH:MM:SS format)
 
 function updateTime() {
@@ -46,20 +48,21 @@ hexColorEl.innerHTML = '#' + hexHours + hexMinutes + hexSeconds
 var updatedHexColor = hexColorEl.innerHTML
 
 // Passing in the updated hex color to our background. 
-bodyEl.style.background = 'radial-gradient(circle at 50% 50% , '+ updatedHexColor +' 0%, #FFF 100%)'
+bodyEl.style.background = 'radial-gradient(circle, #FFF , '+ updatedHexColor +' , #000)'
 
 // Make the line grow over time.
 
-var lineWidth = (lineEl.style.width)
+function addUnit(){
+	console.log("add Unit is firing")
+	console.log(lineWidth)
+	lineWidth = lineWidth * 2
+	lineWidth = lineWidth + "px"
+	}
 
-lineWidth += 2
+addUnit()
 
-lineWidth = lineWidth + "%"
 }
 
-function addUnit(input){
-
-}
 
 setInterval(updateTime, 1000)
 

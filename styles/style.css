@@ -23,7 +23,7 @@ body {
 	position:absolute;
 	font-size: 34px;
 	text-align: center;
-	z-index: -1;
+	z-index: 2;
 }
 
 .hexColor {
@@ -36,10 +36,10 @@ body {
 
 .line {
 	position:absolute;
-	width: 30%; 
+	width: 2px; 
 	/* Width will be dynamically increased every second according to time from date().  */
 	height: 1px;
-	background-color: red;
+	background-color: cyan;
 	text-align: center;
 	margin-top: 50%;
 	margin-left: 40%;
@@ -50,9 +50,14 @@ body {
 
 /* psuedo-selectors */
 
-.hexColor:hover {
+.time:hover {
+	opacity: 0;
+}
+
+.time:hover ~ .hexColor {
 	opacity: 1;
-	background-color: red;
-	z-index:10;
+	/* background-color: #FFF; */
+	/* width:120%; */
+	/* z-index:10; */
 }
 
