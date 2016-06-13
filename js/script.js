@@ -48,14 +48,18 @@ var updatedHexColor = hexColorEl.innerHTML
 // Passing in the updated hex color to our background. 
 bodyEl.style.background = 'radial-gradient(circle at 50% 50% , '+ updatedHexColor +' 0%, #FFF 100%)'
 
+// Make the line grow over time.
 
+var lineWidth = (lineEl.style.width)
 
-lineEl.style.width += 2   
+lineWidth += 2
 
-
-
+lineWidth = lineWidth + "%"
 }
 
+function addUnit(input){
+
+}
 
 setInterval(updateTime, 1000)
 
