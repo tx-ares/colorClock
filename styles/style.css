@@ -19,7 +19,7 @@ body {
 .loader-ring {
   position: absolute;
   top: 56%;
-  left: 51%;
+  left: 50%;
   margin: -120px 0 0 -120px;
   width: 240px;
   height: 240px;
@@ -57,26 +57,28 @@ body {
 /* Container Styles */
 
 .clockContainer {
-	margin: 50vh auto;
+	margin: 53vh auto;
 	position:relative;
-	width:15%;
+	width:100%;
 }
 
 .time {
 	position:absolute;
+	width:100%;
 	font-size: 34px;
 	text-align: center;
 	z-index: 2;
-	margin-left: -5px;
+	margin-left: -2px;
 }
 
 .hexColor {
 	position:absolute;
+	width: 100%;
 	font-size: 34px;
 	text-align: center;
 	vertical-align: center;
 	opacity: 0;
-	margin-left: 20px;
+	/* margin-left: 17px; */
 }
 
 .line {
