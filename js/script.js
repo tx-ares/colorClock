@@ -6,6 +6,8 @@ var timeEl = document.querySelector(".time")
 var hexColorEl = document.querySelector(".hexColor")
 var bodyEl = document.querySelector('body')
 var lineEl = document.querySelector('.line')
+var ringEl = document.querySelector(".loader-ring-light")
+
 
 var lineWidth = parseInt(lineEl.style.width)
 
@@ -25,6 +27,7 @@ var timeOfDay = ( d.getHours() < 12 ) ? "AM" : "PM";
 
 
 // Convert an hours component of "0" to "12"
+currentHours = currentHours % 12
 currentHours = ( currentHours == 0 ) ? 12 : currentHours;
 
 // Pad the minutes and seconds with leading zeros, if needed
@@ -48,15 +51,16 @@ hexColorEl.innerHTML = '#' + hexHours + hexMinutes + hexSeconds
 var updatedHexColor = hexColorEl.innerHTML
 
 // Passing in the updated hex color to our background. 
-bodyEl.style.background = 'radial-gradient(circle, #FFF , '+ updatedHexColor +' , #000)'
+bodyEl.style.background = 'radial-gradient(circle, #FFF , rgba(10,100,100,.5), '+ updatedHexColor +' , #FFF)'
+
+// Make ring change color too.. We gettin' fancy now.
+ringEl.style.boxShadow = '0 4px 0 ' +  updatedHexColor + ' inset'
 
 // Make the line grow over time.
 
 function addUnit(){
-	console.log("add Unit is firing")
-	console.log(lineWidth)
-	lineWidth = lineWidth * 2
-	lineWidth = lineWidth + "px"
+	lineWidth = currentSeconds * 2
+	lineEl.style.width = lineWidth + "px"
 	}
 
 addUnit()

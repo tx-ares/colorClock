@@ -10,6 +10,49 @@ body {
   	/* Will dynamically have a background property changing according to time. */
 }
 
+/* Ring Effect */
+
+.relative {
+  position: relative;
+}
+
+.loader-ring {
+  position: absolute;
+  top: 56%;
+  left: 51%;
+  margin: -120px 0 0 -120px;
+  width: 240px;
+  height: 240px;
+}
+
+.loader-ring-light {
+  width: 240px;
+  height: 240px;
+  border-radius: 240px; 
+  /* box-shadow: 0 4px 0 #00abf2 inset; */
+  animation: rotate-360 1s linear infinite;
+}
+
+.loader-ring-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 240px;
+  border-radius: 240px;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3) inset;
+}
+
+@keyframes rotate-360 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 
 /* Container Styles */
 
@@ -24,6 +67,7 @@ body {
 	font-size: 34px;
 	text-align: center;
 	z-index: 2;
+	margin-left: -5px;
 }
 
 .hexColor {
@@ -32,17 +76,20 @@ body {
 	text-align: center;
 	vertical-align: center;
 	opacity: 0;
+	margin-left: 20px;
 }
 
 .line {
 	position:absolute;
-	width: 2px; 
+
 	/* Width will be dynamically increased every second according to time from date().  */
-	height: 1px;
-	background-color: cyan;
+	/* width: 4px; 
+	height: 5px;
+	background: linear-gradient(to right, cyan, white);
+	box-shadow: 5px 5px 5px 5px; */
 	text-align: center;
 	margin-top: 50%;
-	margin-left: 40%;
+	margin-left: 20%;
 	vertical-align: top;
 	z-index: -1;
 } 
